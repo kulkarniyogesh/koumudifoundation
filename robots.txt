@@ -1,0 +1,33 @@
+# ==============================================================================
+# Koumudi Foundation — Production Search Engine Specifications
+# robots.txt
+# Domain: https://www.koumudifoundation.org
+# ==============================================================================
+
+# User-Agent Rule: All Crawlers (Googlebot, Bingbot, Slurp, DuckDuckBot, Applebot, etc.)
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /aims-and-objectives
+Allow: /save-kidney
+Allow: /initiatives
+Allow: /contribute
+Allow: /contact
+Allow: /transparency
+
+# Disallow administrative, private, transaction, and receipt generation endpoints
+Disallow: /admin/
+Disallow: /api/
+Disallow: /checkout/
+Disallow: /donate/success
+Disallow: /donate/cancel
+Disallow: /receipts/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+
+# Crawl-delay for polite scraping compliance (where supported)
+Crawl-delay: 1
+
+# Sitemaps Declaration
+Sitemap: https://www.koumudifoundation.org/sitemap.xml
+Sitemap: https://www.koumudifoundation.org/sitemap-images.xml

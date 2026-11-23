@@ -1,0 +1,16 @@
+# Koumudi Foundation — Netlify Redirects
+# Clean URL → actual .html file (200 = rewrite, keeps URL clean)
+
+/about                  /about.html             200
+/aims-and-objectives    /aims.html              200
+/aims                   /aims.html              200
+/initiatives            /seva.html              200
+/seva                   /seva.html              200
+/save-kidney            /kidney.html            200
+/kidney                 /kidney.html            200
+/contribute             /contribute.html        200
+/contact                /contact.html           200
+/transparency           /transparency.html      200
+
+# Catch-all 404
+/*                      /index.html             404

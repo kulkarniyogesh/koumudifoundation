@@ -1,0 +1,51 @@
+{
+  "name": "Koumudi Foundation — Sri Koumudi Amma Foundation",
+  "short_name": "Koumudi",
+  "description": "In the service of Lord Narayana. Dedicated to girl child education, renal healthcare & patient support, health education, and community seva.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1e1b4b",
+  "theme_color": "#1e1b4b",
+  "lang": "en",
+  "categories": ["nonprofit", "philanthropy", "education", "healthcare"],
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Save Kidney Campaign",
+      "short_name": "Save Kidney",
+      "url": "/kidney.html",
+      "description": "Renal screening awareness and patient dialysis support"
+    },
+    {
+      "name": "Our Initiatives",
+      "short_name": "Initiatives",
+      "url": "/seva.html",
+      "description": "Explore education, health, and community seva programs"
+    },
+    {
+      "name": "Contribute / Donate",
+      "short_name": "Contribute",
+      "url": "/index.html#contribute",
+      "description": "Support Koumudi Foundation under 80G tax exemption"
+    }
+  ]
+}

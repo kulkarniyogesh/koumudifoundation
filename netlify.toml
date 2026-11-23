@@ -1,0 +1,106 @@
+# ============================================================
+# Koumudi Foundation — Netlify Configuration
+# ============================================================
+
+[build]
+  publish = "."        # static site — all files are in root
+  command = ""         # no build step needed (pure HTML + Tailwind CDN)
+
+# ─── Redirect Rules ──────────────────────────────────────────
+# Clean URL aliases so links work without .html extension
+[[redirects]]
+  from = "/about"
+  to   = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/aims-and-objectives"
+  to   = "/aims.html"
+  status = 200
+
+[[redirects]]
+  from = "/aims"
+  to   = "/aims.html"
+  status = 200
+
+[[redirects]]
+  from = "/initiatives"
+  to   = "/seva.html"
+  status = 200
+
+[[redirects]]
+  from = "/seva"
+  to   = "/seva.html"
+  status = 200
+
+[[redirects]]
+  from = "/save-kidney"
+  to   = "/kidney.html"
+  status = 200
+
+[[redirects]]
+  from = "/kidney"
+  to   = "/kidney.html"
+  status = 200
+
+[[redirects]]
+  from = "/contribute"
+  to   = "/contribute.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to   = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/transparency"
+  to   = "/transparency.html"
+  status = 200
+
+# 404 fallback
+[[redirects]]
+  from = "/*"
+  to   = "/index.html"
+  status = 404
+
+# ─── HTTP Headers ────────────────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Security
+    X-Frame-Options           = "SAMEORIGIN"
+    X-XSS-Protection          = "1; mode=block"
+    X-Content-Type-Options    = "nosniff"
+    Referrer-Policy           = "strict-origin-when-cross-origin"
+    Permissions-Policy        = "camera=(), microphone=(), geolocation=()"
+
+    # Performance: cache HTML briefly, assets longer
+    Cache-Control             = "public, max-age=300, must-revalidate"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+    Content-Type  = "application/manifest+json"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+    Content-Type  = "application/xml"
